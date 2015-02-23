@@ -44,7 +44,7 @@ composer_packages     = [
 ]
 
 nodejs_version        = "0.10"   # Options: vX.X.X | latest
-nodejs_packages       = [
+node_modules       = [
   "bower",
   "grunt",
   "gulp",
@@ -108,7 +108,7 @@ Vagrant.configure("2") do |config|
   ##########
 
   # Install Nodejs
-  config.vm.provision "shell", path: "#{provision_path}/nodejs.sh", privileged: false, args: nodejs_packages.unshift(nodejs_version, github_url)
+  config.vm.provision "shell", path: "#{provision_path}/nodejs.sh", privileged: false, args: node_modules.unshift(nodejs_version, github_url)
 
   # Install Ruby (without RVM)
   config.vm.provision "shell", path: "#{provision_path}/ruby.sh", args: ruby_gems.join(" ")
