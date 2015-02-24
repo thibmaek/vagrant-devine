@@ -43,7 +43,8 @@ Optionally arguments can be passed to the provisioners.
 #### Available provisioners:
 * **Base**: Installs some basic settings and core apt packages before installing other components
 * **PHP**: Installs PHP or HHVM (not recommended for Devine). A version from `php_version` can be passed to this to install a specific PHP version. There are some preset modules this installs (fpm, curl, mcrypt…) and it also turns extensive error reporting and debugging on.
-* **Apache**: Installs latest stable apache2 with some useful presets. Apache uses vhost to configure subdomains and other DNS to the xip.io provider
+* **Apache**: Installs latest stable apache2 with some useful presets. Apache uses vhost to configure subdomains and other DNS to the xip.io provider.  
+To add a new site to your apache server just run `sudo vhost -d /vagrant/htdocs/foldername -s subdomain.192.168.10.10.xip.io` to add it as a virtual host, or put it in htdocs and browse to 192.168.10.10.xip.io/foldername.
 * **MySQL**: Installs MySQL from the version passed trough. Optionally remote access can be enabled to control the client from anywhere.
 * **Node & NPM**: Installs Node and NPM trough [nvm](https://github.com/creationix/nvm). Optionally a version can be passed trough, in case it isn't it defaults to latest. Preset for devine is the 0.10 version. To avoid installing modules with sudo the config path is set to `~/npm`. Modules can be passed trough from `node_modules` and will be installed in the config path. The most common modules are already in the variable.
 * **Ruby**: There are two ways of provisioning for Ruby and RubyGems. To keep things simple it has been set to install without [RVM](https://rvm.io). This installs the latest Ruby and RubyGems 1.9. If you prefer to install Ruby with RVM just comment the current provisioner and comment out the provisioner with RVM.  
