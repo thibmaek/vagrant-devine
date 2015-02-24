@@ -13,7 +13,7 @@ server_ip        = "192.168.10.10"
 server_timezone  = "UTC"
 
 # Provision path
-provision_path   = "./provision"
+provision_path        = "./provision"
 
 # Default web server document root
 public_folder         = "/vagrant/htdocs"
@@ -43,14 +43,18 @@ composer_packages     = [
   "rych/phpass",
 ]
 
+# Node Options
 nodejs_version        = "0.10"   # Options: vX.X.X | latest
-node_modules       = [
+node_modules          = [
   "bower",
   "grunt",
   "gulp",
   "vtop",
   "yo",
 ]
+
+# Frameworker options
+framework             = "thane" # Options: thane | iamdevlopr
 
 
 Vagrant.configure("2") do |config|
@@ -126,6 +130,10 @@ Vagrant.configure("2") do |config|
 
   # Provision Laravel
   # config.vm.provision "shell", path: "#{github_url}/scripts/laravel.sh", privileged: false, args: [server_ip, laravel_root_folder, public_folder, laravel_version]
+
+  # Provision Frameworker (a downloader for IAMDEVLOPR / Thane)
+  # https://github.com/thibmaek for more info
+  # config.vm.provision "shell", path: "#{provision_path}/frameworker.sh", priviliged: false, args: [framework]
 
 
   ####
