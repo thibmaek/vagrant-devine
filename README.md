@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/thibmaek/vagrant-devine.png?label=ready&title=Ready)](https://waffle.io/thibmaek/vagrant-devine)
 [![Build Status](https://travis-ci.org/thibmaek/vagrant-devine.svg?branch=master)](https://travis-ci.org/thibmaek/vagrant-devine)
 
 # What is it?
