@@ -69,9 +69,6 @@ Vagrant.configure("2") do |config|
   config.vm.network :private_network, ip: server_ip
   config.vm.network :forwarded_port, guest: 80, host: 8080
 
-  # Configure folder-sharing
-  config.vm.synced_folder ".", "/vagrant"
-
   # Configure name (for virtualbox)
   config.vm.provider :virtualbox do |vb|
     vb.name = "Devine"
