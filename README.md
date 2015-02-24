@@ -50,7 +50,7 @@ Optionally arguments can be passed to the provisioners.
 *Notice: There is an issue with installing compass from the `ruby_gems`. An issue has been created and will be fixed once I found a solution. For now just manually install compass with `sudo gem install compass`*
 * **Composer**: Installs composer globally in `/usr/local/bin`. Global packages can be passed trough from the `composer_packages` variable. By default [phpass](https://github.com/rchouinard/phpass) and [slim](http://www.slimframework.com) are installed.
 * **~~Laravel~~**: Since devine uses it's own framework ([see a fork here](https://github.com/gerbengeeraerts/IAMDEVLOPR)) this is disabled by default, but can be commented out at any time to be provisioned
-* **Frameworker**: Installs local copies of [https://github.com/thibmaek/thane](Thane) or [https://github.com/gerbengeeraerts/IAMDEVLOPR](IAMDEVLOPR). Argument is passed trough from `framework`. If argument is not supplied this will exit with non-zero status. Local copy is located in htdocs.
+* **Frameworker**: Installs local copies of [Thane](https://github.com/thibmaek/thane) or [IAMDEVLOPR](https://github.com/gerbengeeraerts/IAMDEVLOPR). Argument is passed trough from `framework`. If argument is not supplied this will exit with non-zero status. Local copy is located in htdocs.
 * **Own additions**: You can provision your own scripts or packages or programs from a file `local-script.sh` in the Vagrantfile root.
 
 ## Disclaimer
