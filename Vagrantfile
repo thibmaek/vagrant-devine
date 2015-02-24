@@ -48,6 +48,7 @@ node_modules       = [
   "bower",
   "grunt",
   "gulp",
+  "vtop",
   "yo",
 ]
 
