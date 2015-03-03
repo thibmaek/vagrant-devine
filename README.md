@@ -2,6 +2,8 @@
 [![Build Status](https://travis-ci.org/thibmaek/vagrant-devine.svg?branch=master)](https://travis-ci.org/thibmaek/vagrant-devine)
 
 # What is it?
+<img align="right" height="270" src="http://imgur.com/waqcFyB.png
+"/>
 A Vagrant box for http://devine.be students created with [Vaprobash](http://fideloper.github.io/Vaprobash/index.html).  
 Runs a Ubuntu (Trusty 64) base box and installs programs trough configurable provisioners.  
 Everything is extremely modular and adjustable. If you're a Devine student you probably shouldn't need to change the provisioners or base box.
