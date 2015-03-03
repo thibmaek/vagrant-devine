@@ -87,7 +87,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "#{provision_path}/base_box_optimizations.sh", privileged: true
 
   # Provision dotfiles
-  config.vm.provision "shell", path: "./dotfiles/make.sh", priviliged: false
+  config.vm.provision "shell", path: "./dotfiles/make.sh", privileged: true
 
   # Provision PHP
   config.vm.provision "shell", path: "#{provision_path}/php.sh", args: [hhvm, php_version]
