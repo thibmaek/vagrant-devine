@@ -41,6 +41,7 @@ ruby_gems             = [
 composer_packages     = [
   "slim/slim",
   "rych/phpass",
+  "phpunit/phpunit",
 ]
 
 # Node Options
