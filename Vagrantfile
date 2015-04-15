@@ -4,7 +4,7 @@
 # Settings for downloading from fideloper/vaprobash
 github_username = "fideloper"
 github_repo     = "Vaprobash"
-github_branch   = "1.3.1"
+github_branch   = "1.4.0"
 github_url      = "https://raw.githubusercontent.com/#{github_username}/#{github_repo}/#{github_branch}"
 
 # Server Configuration
@@ -45,7 +45,7 @@ composer_packages     = [
 ]
 
 # Node Options
-nodejs_version        = "0.10"   # Options: vX.X.X | latest
+nodejs_version        = "0.11"   # Options: vX.X | latest
 node_modules          = [
   "bower",
   "grunt",
@@ -130,11 +130,11 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "#{provision_path}/composer.sh", privileged: false, args: composer_packages.join(" ")
 
   # Provision Laravel
-  # config.vm.provision "shell", path: "#{github_url}/scripts/laravel.sh", privileged: false, args: [server_ip, laravel_root_folder, public_folder, laravel_version]
+  #config.vm.provision "shell", path: "#{github_url}/scripts/laravel.sh", privileged: false, args: [server_ip, laravel_root_folder, public_folder, laravel_version]
 
   # Provision Frameworker (a downloader for IAMDEVLOPR / Thane)
   # https://github.com/thibmaek for more info
-  # config.vm.provision "shell", path: "#{provision_path}/frameworker.sh", priviliged: false, args: [framework]
+  #config.vm.provision "shell", path: "#{provision_path}/frameworker.sh", priviliged: false, args: [framework]
 
 
   ####
@@ -142,6 +142,6 @@ Vagrant.configure("2") do |config|
   # Any local scripts you may want to run post-provisioning.
   # Add these to the same directory as the Vagrantfile.
   ##########
-  # config.vm.provision "shell", path: "./local-script.sh"
+  #config.vm.provision "shell", path: "./local-script.sh"
 
 end
