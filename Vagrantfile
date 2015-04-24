@@ -133,7 +133,6 @@ Vagrant.configure("2") do |config|
   #config.vm.provision "shell", path: "#{github_url}/scripts/laravel.sh", privileged: false, args: [server_ip, laravel_root_folder, public_folder, laravel_version]
 
   # Provision Frameworker (a downloader for IAMDEVLOPR / Thane)
-  # https://github.com/thibmaek for more info
   #config.vm.provision "shell", path: "#{provision_path}/frameworker.sh", priviliged: false, args: [framework]
 
 
