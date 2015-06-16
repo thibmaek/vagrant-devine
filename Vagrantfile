@@ -40,7 +40,7 @@ ruby_gems             = [
 # PHP Options
 composer_packages     = [
   "slim/slim",
-  "rych/phpass",
+  "laravel/lumen-installer=~1.0",
   "phpunit/phpunit",
 ]
 
@@ -50,7 +50,8 @@ node_modules          = [
   "bower",
   "grunt",
   "gulp",
-  "vtop",
+  "nodemon",
+  "slap"
   "yo",
 ]
 
