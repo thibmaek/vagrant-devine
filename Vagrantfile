@@ -51,7 +51,7 @@ node_modules          = [
   "grunt",
   "gulp",
   "nodemon",
-  "slap"
+  "slap",
   "yo",
 ]
 
